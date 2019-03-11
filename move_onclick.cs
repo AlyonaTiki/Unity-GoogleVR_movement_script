@@ -26,14 +26,14 @@ public class move_onclick : MonoBehaviour
     //center part of the daydream contreller Y axis
                 if (GvrControllerInput.TouchPos.x > 0.3 && GvrControllerInput.TouchPos.x < 0.7)
                 {
-    //top part of the daydream contreller
+    //top part of the daydream controller
                     if (GvrControllerInput.TouchPos.y < 0.3)
                     {
                         Vector3 forward = Camera.main.transform.TransformDirection(Vector3.forward);
                         forward.y = 0;
                         this.transform.position += forward * Time.deltaTime * speedForward; 
                     }
-    //bottom part of the daydream contreller
+    //bottom part of the daydream controller
                     if (GvrControllerInput.TouchPos.y > 0.7)
                     {
                         Vector3 back = Camera.main.transform.TransformDirection(Vector3.back);
@@ -41,16 +41,16 @@ public class move_onclick : MonoBehaviour
                         this.transform.position += back * Time.deltaTime * speedBack;
                     }
                 }
-    //center part of the daydream contreller X axis
+    //center part of the daydream controller X axis
                 if (GvrControllerInput.TouchPos.y > 0.3 && GvrControllerInput.TouchPos.y < 0.7)
                 {
-    //left part of the daydream contreller
+    //left part of the daydream controller
                     if (GvrControllerInput.TouchPos.x < 0.3)
                     {
                         canRotate = false;
                         StartCoroutine(WaitForSecLeft());
                     }
-    //right part of the daydream contreller
+    //right part of the daydream controller
                     if (GvrControllerInput.TouchPos.x > 0.7)
                     {
                         canRotate = false;

@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class move_forward_onclick : MonoBehaviour
+public class move_onclick : MonoBehaviour
 {
     public float speedForward = 4f; //speed to move forward
     public float speedBack = 2f;    //speed to move backward(better to keep a little slower than forward)
